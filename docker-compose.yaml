@@ -1,0 +1,10 @@
+services:
+  card-database:
+    image: postgres:latest
+    container_name: card_database
+    environment:
+      POSTGRES_DB: card_db
+      POSTGRES_USER: db_user
+      POSTGRES_PASSWORD: db_password
+    ports:
+      - "5432:5432"

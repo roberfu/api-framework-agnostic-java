@@ -1,6 +1,6 @@
-## api-hexagonal-architecture-java
+## api-framework-agnostic-java
 
-### Framework-agnostic implementation of an api project with hexagonal architecture using Spring Boot and Quarkus
+### Framework-agnostic implementation of an api project with clean/hexagonal architecture using Spring Boot and Quarkus
 
 Four projects.
 

@@ -9,6 +9,8 @@ import jakarta.ws.rs.core.MediaType;
 
 import java.util.List;
 
+import org.jspecify.annotations.NonNull;
+
 @Path("api/cards")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
@@ -28,10 +30,9 @@ public class CardController {
     }
 
     @GET
-    public List<CardDto> getAllCards() {
-        List<Card> cards = cardUseCases.getAllCards();
+    public List<@NonNull CardDto> getAllCards() {
+        List<@NonNull Card> cards = cardUseCases.getAllCards();
         return cards.stream().map(card -> new CardDto(card.cardName())).toList();
     }
-
 
 }

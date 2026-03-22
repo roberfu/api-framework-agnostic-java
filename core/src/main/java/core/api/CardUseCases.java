@@ -4,9 +4,11 @@ import core.domain.card.Card;
 
 import java.util.List;
 
+import org.jspecify.annotations.NonNull;
+
 public interface CardUseCases {
 
-    List<Card> getAllCards();
+    List<@NonNull Card> getAllCards();
 
     Card saveCard(String cardName);
 

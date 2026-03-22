@@ -8,6 +8,8 @@ import jakarta.transaction.Transactional;
 
 import java.util.List;
 
+import org.jspecify.annotations.NonNull;
+
 @ApplicationScoped
 public class CardRepositoryImpl implements CardRepository {
 
@@ -20,7 +22,7 @@ public class CardRepositoryImpl implements CardRepository {
     }
 
     @Override
-    public List<Card> getAllCards() {
+    public List<@NonNull Card> getAllCards() {
         return CardEntity.<CardEntity>listAll()
                 .stream()
                 .map(entity -> new Card(entity.getCardName()))

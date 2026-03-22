@@ -7,6 +7,8 @@ import core.spi.ExternalClient;
 
 import java.util.List;
 
+import org.jspecify.annotations.NonNull;
+
 public class CardService implements CardUseCases {
 
     private final CardRepository cardRepository;
@@ -24,7 +26,7 @@ public class CardService implements CardUseCases {
     }
 
     @Override
-    public List<Card> getAllCards() {
+    public List<@NonNull Card> getAllCards() {
         return cardRepository.getAllCards();
     }
 

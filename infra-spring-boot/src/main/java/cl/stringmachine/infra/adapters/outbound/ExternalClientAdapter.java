@@ -23,7 +23,6 @@ public class ExternalClientAdapter implements ExternalClientPort {
     }
 
     @Override
-    @SuppressWarnings("null")
     public String searchCardName(String cardName) {
         try {
             String url = BASE_URL + cardName;

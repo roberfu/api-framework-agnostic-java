@@ -20,7 +20,6 @@ public class CardRepositoryAdapter implements CardRepositoryPort {
 
     @Override
     @Transactional
-    @SuppressWarnings("null")
     public Card saveCard(String cardName) {
         CardEntity entity = jpaRepositoryAdapter.save(new CardEntity(null, cardName));
         return new Card(entity.getCardName());
